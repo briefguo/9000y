@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <script type="text/javascript" src="build/bundle.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../build/bundle.js" charset="utf-8"></script>
 </head>
 
 <body>
