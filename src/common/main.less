@@ -1,11 +1,11 @@
 // bower:scss
 @import "normalize.less";
 body {
-  font: 14px/1.5 Helvetica, Tahoma, Arial, 'Hiragino Sans GB', "Microsoft YaHei", SimSun, Heiti, sans-serif;
+  font-family: Helvetica Neue, Microsoft Yahei, 'Source Han Sans', Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
   font-size  : 14px;
   line-height: 1.42857143;
   color      : #333;
-  background : #fff url("../images/services.jpg") 50% top no-repeat;
+  background : #fff url("../../images/services.jpg") 50% top no-repeat;
 }
 @font-face {
   font-family: "Source Han Sans";
@@ -15,7 +15,11 @@ body {
   font-style : normal;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Source Han Sans', Helvetica, Tahoma, Arial, 'Hiragino Sans GB', "Microsoft YaHei", SimSun, Heiti, sans-serif;
+  font-family: Helvetica Neue, Microsoft Yahei, 'Source Han Sans', Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  font-weight: 200;
+}
+h1 small, h2 small, h3 small{
+  color: #777;
 }
 section {
   padding: 8em 0;
@@ -179,7 +183,7 @@ a:focus {
   height         : 45px;
   opacity        : 0.7;
   border-radius  : 2px;
-  background     : #ec4c18 url("../images/logo.png") center no-repeat;
+  background     : #ec4c18 url("../../images/logo.png") center no-repeat;
   background-size: 105%;
 }
 #Logo-footer {
@@ -190,7 +194,7 @@ a:focus {
   padding        : 5px;
   border         : 1px solid #ccc;
   border-radius  : 30px;
-  background     : #ccc url("../images/logogray.png") center no-repeat;
+  background     : #ccc url("../../images/logogray.png") center no-repeat;
   background-size: 80%;
 }
 #active-article {
@@ -205,7 +209,7 @@ a:focus {
 }
 #Content-contact {
   height             : 500px;
-  background-image   : url("../images/Content-contact.png");
+  background-image   : url("../../images/Content-contact.png");
   background-repeat  : no-repeat;
   background-position: 0 110%;
 }
@@ -241,7 +245,7 @@ a {
   box-shadow      : 1px 1px 4px rgba(0, 0, 0, .2);
 }
 .CW {
-  font-family     : "impact";
+  // font-family     : "impact";
   font-size       : 11pt;
   display         : inline-block;
   margin          : 10px 0 10px 10px;

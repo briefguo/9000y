@@ -54,15 +54,3 @@
     </span>
   </div>
 </footer>
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<!-- <script src="/bower_components/jquery/dist/jquery.js"></script> -->
-<!-- endbower -->
-<!-- endbuild -->
-<!-- build:js scripts/main.js -->
-
-<!-- endbuild -->
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-</body>
-
-</html>

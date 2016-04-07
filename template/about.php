@@ -1,5 +1,4 @@
 <?php require 'header.php'; ?>
-
 <section>
   <div class="container-center">
     <div class="title-center">
@@ -8,7 +7,7 @@
       </div>
       <div class="panel-body">
       </div>
-      <a class="hvr-fade" href="#" id="btn-play">了解公司</a>
+      <a class="hvr-fade" id="btn-play">了解公司</a>
     </div>
   </div>
 </section>
@@ -25,7 +24,8 @@
   <div class="container-center">
     <div class="title-center">
       <div class="panel-body">
-        <a class="hvr-fade" href="news.php">查看更多</a>
+        <div ui-view="newslist"></div>
+        <a class="hvr-fade" ui-sref="about.newslist">查看更多</a>
       </div>
     </div>
   </div>

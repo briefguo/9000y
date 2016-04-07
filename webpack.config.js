@@ -1,19 +1,25 @@
 module.exports = {
-  entry: './main.js',
+  entry : './src/entry/index.js',
   output: {
-    path: './build',
+    path    : './build',
     filename: 'bundle.js'
   },
   module: {
     loaders: [{
-      test: /\.css$/,
+      test  : /\.css$/,
       loader: 'style!css'
-    }, {
-      test: /\.less$/,
-      loader: 'style!css!less'
-    }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192'
-    }]
+    },
+      {
+        test  : /\.less$/,
+        loader: 'style!css!less'
+      },
+      {
+        test  : /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192&name=[path][name].[ext]'
+      },
+      {
+        test   : /\.jsx?$/,
+        loaders: ['babel-loader']
+      }]
   }
 };
