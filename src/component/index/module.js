@@ -1,23 +1,23 @@
 angular.module('nine.index', ['ui.router'])
-  .config(function($stateProvider, $urlRouterProvider){
+  .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/index");
     $stateProvider
       .state('index', {
-        url        : "/index",
+        url: "/index",
         templateUrl: "template/index.php"
-      })
+      });
   })
-  .service('News', ['$http', function($http){
+  .service('News', ['$http', function($http) {
     var News = {
-      getList: function(callback){
+      getList: function(callback) {
         $http({
-          url   : 'data/news/list.json',
+          url: 'data/news/list.json',
           method: 'POST'
-        }).success(function(data, header, config, status){
+        }).success(function(data, header, config, status) {
           //响应成功
           callback('success', data);
           //$scope.items = data;
-        }).error(function(data, header, config, status){
+        }).error(function(data, header, config, status) {
           callback('error', data);
           //console.log();
           //处理响应失败
@@ -26,8 +26,8 @@ angular.module('nine.index', ['ui.router'])
     };
     return News;
   }])
-  .controller('newslistController', ['$scope', 'News', function($scope, News){
-    News.getList(function(state, data){
+  .controller('newslistController', ['$scope', 'News', function($scope, News) {
+    News.getList(function(state, data) {
       console.log(state);
       $scope.items = data;
     });

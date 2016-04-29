@@ -1,48 +1,30 @@
 {
-  "private": true,
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "webpack": "^1.12.11"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "dev": "webpack --watch"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended"
-    ],
-    "env": {
-      "node": true,
-      "browser": true,
-      "es6": true,
-      "jquery": true,
-      "mocha": true
-    },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ],
-      "indent": [
-        2,
-        2
-      ]
-    }
-  },
   "name": "9000y",
   "version": "1.0.0",
-  "description": "9000y",
-  "main": "app/index.php",
-  "directories": {
-    "test": "test"
+  "description": "company",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-loader": "^6.2.4",
+    "html-webpack-plugin": "^2.16.0",
+    "jquery": "^2.2.3",
+    "webpack-dev-server": "^1.14.1"
   },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.config.js  --inline --colors",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://briefguo@github.com/BriefGuo/9000y.git"
+  },
+  "keywords": [
+    "9000y"
+  ],
   "author": "GYJ",
   "license": "ISC",
-  "dependencies": {
-    "babel-core": "^6.7.4",
-    "jsx-loader": "^0.13.2"
-  }
+  "bugs": {
+    "url": "https://github.com/BriefGuo/9000y/issues"
+  },
+  "homepage": "https://github.com/BriefGuo/9000y#readme"
 }

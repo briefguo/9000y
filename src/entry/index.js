@@ -1,11 +1,13 @@
-require('../common/lib');
-require('angular');
+const angular = require('angular');
 require('angular-ui-router');
-require('../component/index.module');
-require('../component/about.module');
-require('../component/service.module');
-require('../component/work.module');
-require('../component/support.module');
+
+require('../common/lib');
+
+require('../component/index/module');
+require('../component/about/module');
+require('../component/service/module');
+require('../component/work/module');
+require('../component/support/module');
 
 angular.module('nine', [
   'ui.router',
@@ -14,4 +16,4 @@ angular.module('nine', [
   'nine.service',
   'nine.work',
   'nine.support',
-])
+]);

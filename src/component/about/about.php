@@ -1,4 +1,3 @@
-<?php require 'header.php'; ?>
 <section>
   <div class="container-center">
     <div class="title-center">
@@ -42,4 +41,3 @@
 
   </div>
 </section>
-<?php require 'footer.php'; ?>

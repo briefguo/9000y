@@ -19,26 +19,19 @@ angular.module('nine.about', ['ui.router'])
   })
   .service('News', ['$http', function($http){
     var News = {
-      getList: function(callback){
-        $http({
-          url   : 'data/news/list.json',
-          method: 'POST'
-        }).success(function(data, header, config, status){
-          //响应成功
-          callback('success',data);
-          //$scope.items = data;
-        }).error(function(data, header, config, status){
-          callback('error',data);
-          //console.log();
-          //处理响应失败
-        });
+      getAllInfo: function(callback){
+        query('News.getAllInfo', '', function(r){
+          callback(r);
+        })
       }
     };
     return News;
-  }])
+  }
+  ])
   .controller('newslistController', ['$scope', 'News', function($scope, News){
-    News.getList(function(state,data){
-      console.log(state);
-      $scope.items = data;
+    News.getAllInfo(function(r){
+      $scope.items = r.data.info;
+      $scope.$apply();
     });
-  }])
+  }
+  ])
