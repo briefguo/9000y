@@ -4,7 +4,7 @@ angular.module('nine.index', ['ui.router'])
     $stateProvider
       .state('index', {
         url: "/index",
-        templateUrl: "template/index.php"
+        templateUrl: "./src/component/index/tpl.html"
       });
   })
   .service('News', ['$http', function($http) {

@@ -4,14 +4,14 @@ angular.module('nine.about', ['ui.router'])
     $stateProvider
       .state('about', {
         url        : "/about",
-        templateUrl: "template/about.php"
+        templateUrl: "./src/component/about/about.php"
       })
       .state('about.newslist', {
         url  : "/list",
         // templateUrl: "template/about.newslist.php",
         views: {
           "newslist": {
-            templateUrl: "template/about.newslist.php",
+            templateUrl: "./src/component/about/about.newslist.php",
             controller : "newslistController"
           }
         }
