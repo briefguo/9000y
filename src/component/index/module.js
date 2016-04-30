@@ -1,12 +1,4 @@
-angular.module('nine.index', ['ui.router'])
-  .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/index");
-    $stateProvider
-      .state('index', {
-        url: "/index",
-        templateUrl: "./src/component/index/tpl.html"
-      });
-  })
+angular.module('nine.index', [])
   .service('News', ['$http', function($http) {
     var News = {
       getList: function(callback) {

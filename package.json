@@ -1,30 +1,17 @@
 {
   "name": "9000y",
-  "version": "1.0.0",
-  "description": "company",
-  "main": "webpack.config.js",
-  "dependencies": {
-    "babel-loader": "^6.2.4",
-    "html-webpack-plugin": "^2.16.0",
-    "jquery": "^2.2.3",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "devDependencies": {},
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.js  --inline --colors",
-    "build": "webpack -p"
+    "start": "node ./bin/www & webpack -w"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://briefguo@github.com/BriefGuo/9000y.git"
-  },
-  "keywords": [
-    "9000y"
-  ],
-  "author": "GYJ",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BriefGuo/9000y/issues"
-  },
-  "homepage": "https://github.com/BriefGuo/9000y#readme"
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  }
 }
