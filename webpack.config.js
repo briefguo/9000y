@@ -1,12 +1,15 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TransferWebpackPlugin = require('transfer-webpack-plugin');
+var path = require('path');
+// var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+// const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 module.exports = {
-  entry: './src/entry/index.jsx',
+  devtool: 'cheap-module-eval-source-map',
+  entry: './app/main.js',
   output: {
-    path: './public',
-    filename: './javascripts/bundle.js',
+    path: path.resolve('./public'),
+    filename: '/javascripts/bundle.js',
+    publicPath: '',
   },
   module: {
     loaders: [{
@@ -17,10 +20,12 @@ module.exports = {
       loader: 'style!css!less',
     }, {
       test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192&name=images/[name]_[hash].[ext]',
+      loader: 'url-loader?limit=8192&name=images/[name].[ext]',
     }, {
-      test: /\.jsx?$/,
+      test: /\.(js|jsx)$/,
       loaders: ['babel-loader'],
+      exclude: /node_modules/,
+      include: __dirname
     }],
   },
   plugins: [ // 把指定文件夹下的文件复制到指定的目录
@@ -29,10 +34,13 @@ module.exports = {
     //   to: './public/images/',
     // }]),
     new HtmlWebpackPlugin({
-      template: './src/entry/index.html',
+      template: './index.html',
       filename: 'index.html',
       inject: 'body',
     }),
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    // new webpack.HotModuleReplacementPlugin()
+
     // new webpack.HotModuleReplacementPlugin(),
 
     // 这个好像也是必须的，虽然我还没搞懂它的作用

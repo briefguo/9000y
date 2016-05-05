@@ -3,15 +3,57 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www & webpack -w"
+    "default": "babel-node ./bin/www & npm run watch",
+    "build": "webpack",
+    "watch": "webpack -w",
+    "start": "DEBUG=9000y:* npm run default"
   },
   "dependencies": {
+    "animate.css": "^3.5.1",
+    "antd": "^0.12.16",
     "body-parser": "~1.13.2",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
+    "draft-js": "^0.6.0",
     "express": "~4.13.1",
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
+    "react-router": "^2.4.0",
+    "redux": "^3.5.2",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "9000y",
+  "devDependencies": {
+    "antd": "^0.12.16",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.1.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "connect-multiparty": "^2.0.0",
+    "cross-env": "^1.0.7",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.16.1",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://briefguo@github.com/BriefGuo/9000y.git"
+  },
+  "keywords": [
+    "9000y"
+  ],
+  "author": "GYJ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BriefGuo/9000y/issues"
+  },
+  "homepage": "https://github.com/BriefGuo/9000y#readme"
 }

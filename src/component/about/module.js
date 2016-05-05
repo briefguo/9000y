@@ -1,1 +1,0 @@
-import { News } from './service';
