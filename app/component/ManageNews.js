@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Link, browserHistory } from 'react-router';
 import { query } from '../common/query';
 
-import { Form, Input, Button, Upload, Select, Checkbox, Radio, Tooltip, Icon } from 'antd';
+import { Affix, Breadcrumb, Form, Input, Button, Upload, Select, Checkbox, Radio, Tooltip, Icon } from 'antd';
 
 const FormItem = Form.Item;
 
@@ -55,40 +55,50 @@ class ManageNews extends React.Component {
   }
   render() {
     return (
-      <Form horizontal onSubmit={e=>this.handleSubmit(e)}>
-        <FormItem
-          id="newsTitle"
-          label="标题："
-          labelCol={{ span: 6 }}
-          wrapperCol={{ span: 14 }}>
-          <Input id="newsTitle" value={this.state.newsTitle} onChange={e=>this.handleTitleChange(e)}/>
-        </FormItem>
-        <FormItem
-          id="newContent"
-          label="内容："
-          labelCol={{ span: 6 }}
-          wrapperCol={{ span: 14 }}>
-          <Input type="textarea" id="newContent" value={this.state.newsContent} onChange={e=>this.handleContentChange(e)} rows="8" />
-        </FormItem>
-        <FormItem
-          id="select"
-          label="分类："
-          labelCol={{ span: 6 }}
-          wrapperCol={{ span: 14 }}>
-          <Select id="select" size="large" defaultValue="未分类" value={this.state.newsClass} onChange={e=>this.handleClassChange(e)} style={{ width: 200 }}>
-            <Option value="未分类">未分类</Option>
-            <Option value="公司新闻">公司新闻</Option>
-            <Option value="招聘信息" disabled>招聘信息</Option>
-            <Option value="项目信息">项目信息</Option>
-          </Select>
-        </FormItem>
-        <FormItem
-          label=" "
-          labelCol={{ span: 6 }}
-          wrapperCol={{ span: 14 }}>
-          <Button htmlType="submit">{this.state.action}</Button>
-        </FormItem>
-      </Form>
+      <div>
+        <Affix>
+          <Breadcrumb>
+            <Breadcrumb.Item>首页</Breadcrumb.Item>
+            <Breadcrumb.Item>新闻</Breadcrumb.Item>
+            <Breadcrumb.Item>编辑</Breadcrumb.Item>
+          </Breadcrumb>
+        </Affix>
+        <br/><br/><br/>
+        <Form horizontal onSubmit={e=>this.handleSubmit(e)}>
+          <FormItem
+            id="newsTitle"
+            label="标题："
+            labelCol={{ span: 6 }}
+            wrapperCol={{ span: 14 }}>
+            <Input id="newsTitle" value={this.state.newsTitle} onChange={e=>this.handleTitleChange(e)}/>
+          </FormItem>
+          <FormItem
+            id="newContent"
+            label="内容："
+            labelCol={{ span: 6 }}
+            wrapperCol={{ span: 14 }}>
+            <Input type="textarea" id="newContent" value={this.state.newsContent} onChange={e=>this.handleContentChange(e)} rows="8" />
+          </FormItem>
+          <FormItem
+            id="select"
+            label="分类："
+            labelCol={{ span: 6 }}
+            wrapperCol={{ span: 14 }}>
+            <Select id="select" size="large" defaultValue="未分类" value={this.state.newsClass} onChange={e=>this.handleClassChange(e)} style={{ width: 200 }}>
+              <Option value="未分类">未分类</Option>
+              <Option value="公司新闻">公司新闻</Option>
+              <Option value="招聘信息" disabled>招聘信息</Option>
+              <Option value="项目信息">项目信息</Option>
+            </Select>
+          </FormItem>
+          <FormItem
+            label=" "
+            labelCol={{ span: 6 }}
+            wrapperCol={{ span: 14 }}>
+            <Button htmlType="submit">{this.state.action}</Button>
+          </FormItem>
+        </Form>
+      </div>
     );
   }
 }

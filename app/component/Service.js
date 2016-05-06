@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Timeline } from 'antd';
 
 class Service extends React.Component {
   render() {
@@ -31,6 +32,18 @@ class Service extends React.Component {
                 <br/>
                 <small>产品开发、策划与运营、影视传播</small>
               </h2>
+              <br/><br/><br/>
+              <Timeline>
+                <Timeline.Item>创建服务现场 2015-09-01</Timeline.Item>
+                <Timeline.Item>初步排除网络异常 2015-09-01</Timeline.Item>
+                <Timeline.Item>技术测试异常 2015-09-01</Timeline.Item>
+                <Timeline.Item>网络异常正在修复 2015-09-01</Timeline.Item>
+                <Timeline.Item>网络异常正在修复 2015-09-01</Timeline.Item>
+                <Timeline.Item>网络异常正在修复 2015-09-01</Timeline.Item>
+                <Timeline.Item>网络异常正在修复 2015-09-01</Timeline.Item>
+                <Timeline.Item>网络异常正在修复 2015-09-01</Timeline.Item>
+                <Timeline.Item>网络异常正在修复 2015-09-01</Timeline.Item>
+              </Timeline>
             </div>
           </div>
         </section>

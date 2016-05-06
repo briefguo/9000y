@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router';
-import { query } from '../common/query'
+import { query } from '../common/query';
+import { Icon, Affix, Breadcrumb, Tag } from 'antd';
 
 class WorkDetail extends React.Component {
   constructor(props, context) {
@@ -29,10 +30,20 @@ class WorkDetail extends React.Component {
   }
   render() {
     return (
-      <div className="container center bg-white projectDetail content">
+      <div className="bg-white projectDetail content">
+        <Affix>
+          <Breadcrumb>
+            <Breadcrumb.Item>首页</Breadcrumb.Item>
+            <Breadcrumb.Item href="">作品案例</Breadcrumb.Item>
+            <Breadcrumb.Item href="">{this.state.projectClass}</Breadcrumb.Item>
+            <Breadcrumb.Item>{this.state.projectTitle}</Breadcrumb.Item>
+          </Breadcrumb>
+        </Affix>
+        <br/><br/><br/>
         <h2>{this.state.projectTitle}</h2>
-        <p><small>{this.state.projectClass} {this.state.projectTime}</small></p>
-        <img src={this.state.projectImage+'.jpg'} alt=""/>
+        <Tag><Icon type="tag"/> {this.state.projectClass}</Tag>
+        <p><small> {this.state.projectTime}</small></p>
+        <img src={this.state.projectImage} alt=""/>
         <br/>
         <article dangerouslySetInnerHTML={{__html:this.state.projectContent}}></article>
       </div>
@@ -42,17 +53,17 @@ class WorkDetail extends React.Component {
 
 class WorkItem extends React.Component {
   render() {
-    console.log(this);
     return (
       <div className="fadeInLeft projectItem" style={this.props.speed}>
         <h3>{this.props.data.project_title}</h3>
-        <div>{this.props.data.project_class}</div>
-        <img src={this.props.data.project_image} alt=""/>
-        <div>{this.props.data.project_time}</div>
-        <div>{this.props.data.post_user}</div>
-        <div className="hover-slideUp">
-          <Link to={"/work/" + this.props.id}>查看详情</Link>
-        </div>
+        <br/>
+        <img className="img-res" src={this.props.data.project_image} alt=""/>
+        <br/>
+        <br/>
+        <Tag><Icon type="tag"/> {this.props.data.project_class}</Tag>
+        <Link to={"/work/" + this.props.id}>
+          <div className="hover-slideUp">查看详情</div>
+        </Link>
       </div>
     )
   }
@@ -89,7 +100,7 @@ class WorkList extends React.Component {
       });
     }
     return (
-      <div className="container start projectList">
+      <div className="container center projectList">
         {workNodes}
       </div>
     )
@@ -118,13 +129,14 @@ class Work extends React.Component {
           </div>
         </section>
         <section>
-          <div className="container-center">
+          <div className="container center">
             <div className="title-center">
               <h2>作品案例
                 <br/><small>产品开发、策划与运营、影视传播</small>
               </h2>
             </div>
           </div>
+          <br/><br/>
           <WorkList limit="3"></WorkList>
         </section>
         <section className="section-content">

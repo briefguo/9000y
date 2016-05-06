@@ -1,8 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router';
+import { Carousel} from 'antd';
 
 class Index extends React.Component {
+  onChange(a, b, c) {
+    console.log(a, b, c);
+  }
   render() {
     return (
       <div>
@@ -23,8 +27,13 @@ class Index extends React.Component {
               </h2>
             </div>
           </div>
-          <div className="container">
-
+          <div className="container center">
+            <Carousel afterChange={e=>this.onChange(e)}>
+              <div><h3>1</h3></div>
+              <div><h3>2</h3></div>
+              <div><h3>3</h3></div>
+              <div><h3>4</h3></div>
+            </Carousel>
           </div>
         </section>
         <section className="bg-white">

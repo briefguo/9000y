@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Link } from 'react-router'
 import { query } from '../../common/query'
+import { Icon, Affix, Breadcrumb, Tag } from 'antd';
 
 class NewsDetail extends React.Component {
   constructor(props, context) {
@@ -11,6 +12,7 @@ class NewsDetail extends React.Component {
       post_user: null,
       news_content: null,
       post_date: null,
+      news_class: null,
     };
   }
   componentDidMount() {
@@ -20,12 +22,22 @@ class NewsDetail extends React.Component {
         post_user: r.data.info.post_user,
         news_content: r.data.info.news_content,
         post_date: r.data.info.post_date,
+        news_class: r.data.info.news_class,
       });
     })
   }
   render() {
     return (
-      <div className="container center bg-white newsDetail content">
+      <div className="newsDetail content">
+        <Affix>
+          <Breadcrumb>
+            <Breadcrumb.Item>首页</Breadcrumb.Item>
+            <Breadcrumb.Item href="">新闻</Breadcrumb.Item>
+            <Breadcrumb.Item href="">{this.state.news_class}</Breadcrumb.Item>
+            <Breadcrumb.Item>{this.state.news_title}</Breadcrumb.Item>
+          </Breadcrumb>
+        </Affix>
+        <br/><br/><br/>
         <h2>{this.state.news_title}</h2>
         <p><small>{this.state.post_user} {this.state.post_date}</small></p>
         <br/>
@@ -40,11 +52,11 @@ class NewsItem extends React.Component {
     return (
       <div className="fadeInLeft newsItem" style={this.props.speed}>
         <h3>{this.props.data.news_title}</h3>
-        <div>{this.props.data.news_class}</div>
-        <div>{this.props.data.post_user}</div>
-        <div className="hover-slideUp">
-          <Link to={"/news/" + this.props.id}>查看详情</Link>
-        </div>
+        <article>{this.props.data.news_content}</article>
+        <div><Tag><Icon type="tag" /> {this.props.data.news_class}</Tag></div>
+        <Link to={"/news/" + this.props.id}>
+          <div className="hover-slideUp">查看详情</div>
+        </Link>
       </div>
     )
   }

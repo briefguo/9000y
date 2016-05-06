@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import { Link } from 'react-router';
 import { News } from './News';
 
-
 class About extends React.Component {
   render() {
     return (

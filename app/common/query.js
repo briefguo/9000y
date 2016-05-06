@@ -1,9 +1,9 @@
 var $ = require('jquery');
 
 var query = function(api_name, params, callback) {
-  var host = 'http://localhost';
-  var path = '/9000y/api/Phalapi/Public/';
-  var api_url = host + path + '?service=' + api_name;
+  var local = 'http://localhost/9000y/api/Phalapi/Public/';
+  var host = 'http://139.196.210.223:81/';
+  var api_url = host + '?service=' + api_name;
 
   $.ajax({
     url: api_url,
