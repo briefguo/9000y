@@ -1,4 +1,5 @@
 var path = require('path');
+var Promise = require('es6-promise');
 // var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 // const TransferWebpackPlugin = require('transfer-webpack-plugin');
