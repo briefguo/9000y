@@ -17,9 +17,6 @@ var routes = require('./routes/index');
 // var users = require('./routes/users');
 // var routes = require('./app/routes');
 
-import { renderToString } from 'react-dom/server'
-import { match, RoutingContext } from 'react-router'
-
 var app = express();
 // var compiler = webpack(config)
 

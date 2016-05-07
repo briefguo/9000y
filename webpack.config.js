@@ -8,8 +8,8 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: './app/main.js',
   output: {
-    path: path.resolve('./public'),
-    filename: 'javascripts/bundle.js',
+    path: __dirname,
+    filename: '/public/javascripts/bundle.js',
     publicPath: '',
   },
   module: {
