@@ -8,7 +8,7 @@ module.exports = {
   entry: './app/main.js',
   output: {
     path: path.resolve('./public'),
-    filename: '/javascripts/bundle.js',
+    filename: 'javascripts/bundle.js',
     publicPath: '',
   },
   module: {
@@ -34,7 +34,7 @@ module.exports = {
     //   to: './public/images/',
     // }]),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './views/index.html',
       filename: 'index.html',
       inject: 'body',
     }),

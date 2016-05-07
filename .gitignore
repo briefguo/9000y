@@ -1,8 +1,8 @@
-.DS_Store
-node_modules
-dist
-.tmp
-bower_components
 .idea/
-public/*.js
-public/*.json
+.DS_Store
+node_modules/
+dist/
+.tmp/
+bower_components/
+public/javascripts/
+public/uploads/
