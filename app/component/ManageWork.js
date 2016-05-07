@@ -47,7 +47,7 @@ class ManageWork extends React.Component {
       return;
     }
     query(this.state.url, this.state, (r) => {
-      this.props.history.pushState(null, '/work/' + this.state.projectId)
+      this.props.history.pushState(null, '/work/' + r.data.info)
     })
   }
   handleTitleChange(e) {

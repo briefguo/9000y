@@ -111,6 +111,17 @@ class Work extends React.Component {
   render() {
     return (
       <div>
+        <section>
+          <div className="container center">
+            <div className="title-center">
+              <h2>作品案例
+                <br/><small>产品开发、策划与运营、影视传播</small>
+              </h2>
+            </div>
+          </div>
+          <br/><br/>
+          <WorkList limit="3"></WorkList>
+        </section>
         <section className="bg-white">
           <div className="container-center">
             <div className="panel-large">
@@ -127,17 +138,6 @@ class Work extends React.Component {
               </div>
             </div>
           </div>
-        </section>
-        <section>
-          <div className="container center">
-            <div className="title-center">
-              <h2>作品案例
-                <br/><small>产品开发、策划与运营、影视传播</small>
-              </h2>
-            </div>
-          </div>
-          <br/><br/>
-          <WorkList limit="3"></WorkList>
         </section>
         <section className="section-content">
           <div className="container-center">

@@ -28,7 +28,7 @@ class NewsDetail extends React.Component {
   }
   render() {
     return (
-      <div className="newsDetail content">
+      <div className="content">
         <Affix>
           <Breadcrumb>
             <Breadcrumb.Item>首页</Breadcrumb.Item>
@@ -38,10 +38,12 @@ class NewsDetail extends React.Component {
           </Breadcrumb>
         </Affix>
         <br/><br/><br/>
-        <h2>{this.state.news_title}</h2>
-        <p><small>{this.state.post_user} {this.state.post_date}</small></p>
-        <br/>
-        <article dangerouslySetInnerHTML={{__html:this.state.news_content}}></article>
+        <div className="newsDetail">
+          <h2>{this.state.news_title}</h2>
+          <p><small>{this.state.post_user} {this.state.post_date}</small></p>
+          <br/>
+          <article dangerouslySetInnerHTML={{__html:this.state.news_content}}></article>
+        </div>
       </div>
     )
   }
