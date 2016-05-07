@@ -37,7 +37,7 @@ module.exports = {
     //   from: './public/public/images/',
     //   to: './public/images/',
     // }]),
-    new webpack.optimize.CommonsChunkPlugin('vendor', '/vendor/vendor.js'),
+    new webpack.optimize.CommonsChunkPlugin('vendor', '/public/javascripts/vendor.js'),
     new HtmlWebpackPlugin({
       template: './views/index.html',
       filename: 'index.html',
