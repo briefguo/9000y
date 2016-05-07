@@ -1,12 +1,15 @@
 var path = require('path');
 var Promise = require('es6-promise');
-// var webpack = require('webpack');
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 // const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: './app/main.js',
+  entry: {
+    bundle: './app/main.js',
+    vendor: ['jquery', 'draft-js', 'animate.css', 'antd', 'react-router', 'react', 'react-dom'],
+  },
   output: {
     path: __dirname,
     filename: '/public/javascripts/bundle.js',
@@ -34,6 +37,7 @@ module.exports = {
     //   from: './public/public/images/',
     //   to: './public/images/',
     // }]),
+    new webpack.optimize.CommonsChunkPlugin('vendor', '/vendor/vendor.js'),
     new HtmlWebpackPlugin({
       template: './views/index.html',
       filename: 'index.html',
