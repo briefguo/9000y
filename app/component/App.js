@@ -24,7 +24,7 @@ class App extends React.Component {
         <Menu onClick={e=>this.handleClick(e)}
           selectedKeys={[this.state.current]}
           mode="horizontal">
-          <Menu.Item key="service">
+          <Menu.Item key="index">
             <Link to="/">九千年文化</Link>
           </Menu.Item>
           <Menu.Item key="service">

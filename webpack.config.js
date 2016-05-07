@@ -8,7 +8,15 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: {
     bundle: './app/main.js',
-    vendor: ['jquery', 'draft-js', 'animate.css', 'antd', 'react-router', 'react', 'react-dom'],
+    vendor: [
+      'jquery',
+      'draft-js',
+      'animate.css',
+      'antd',
+      'react-router',
+      'react',
+      'react-dom',
+    ],
   },
   output: {
     path: __dirname,
@@ -32,24 +40,20 @@ module.exports = {
       include: __dirname
     }],
   },
-  plugins: [ // 把指定文件夹下的文件复制到指定的目录
+  plugins: [
+    // 把指定文件夹下的文件复制到指定的目录
     // new TransferWebpackPlugin([{
     //   from: './public/public/images/',
     //   to: './public/images/',
     // }]),
     new webpack.optimize.CommonsChunkPlugin('vendor', '/public/javascripts/vendor.js'),
     new HtmlWebpackPlugin({
-      template: './views/index.html',
+      template: './public/template.html',
       filename: 'index.html',
       inject: 'body',
     }),
     // new webpack.optimize.OccurenceOrderPlugin(),
-    // new webpack.HotModuleReplacementPlugin()
-
     // new webpack.HotModuleReplacementPlugin(),
-
-    // 这个好像也是必须的，虽然我还没搞懂它的作用
-
     // new webpack.NoErrorsPlugin(),
   ],
 };
