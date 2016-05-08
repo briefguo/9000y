@@ -14,7 +14,6 @@ class ManageWork extends React.Component {
       action: '新增',
       postUser: 'GYJ',
       url: 'Project.createOneInfo',
-      id: null,
       projectId: null,
       projectClass: null,
       projectContent: null,
@@ -24,7 +23,6 @@ class ManageWork extends React.Component {
     };
   }
   componentDidMount() {
-    console.log(this);
     if (this.props.params.id) {
       query('Project.getBaseInfo', { projectId: this.props.params.id }, (r) => {
         this.setState({
@@ -47,7 +45,7 @@ class ManageWork extends React.Component {
       return;
     }
     query(this.state.url, this.state, (r) => {
-      this.props.history.pushState(null, '/work/' + r.data.info)
+      this.props.history.pushState(null, '/work/' + this.state.projectId)
     })
   }
   handleTitleChange(e) {
@@ -110,9 +108,11 @@ class ManageWork extends React.Component {
               onChange={e=>this.handleClassChange(e)}
               style={{ width: 200 }}>
               <Option value="未分类">未分类</Option>
-              <Option value="公司新闻">公司新闻</Option>
-              <Option value="招聘信息" disabled>招聘信息</Option>
-              <Option value="项目信息">项目信息</Option>
+              <Option value="Web应用">Web应用</Option>
+              <Option value="App应用">App应用</Option>
+              <Option value="影视广告">影视广告</Option>
+              <Option value="策划运营">策划运营</Option>
+              <Option value="动漫游戏">动漫游戏</Option>
             </Select>
           </FormItem>
           <FormItem

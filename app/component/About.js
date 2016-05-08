@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router';
-import { News } from './News';
+import { NewsList } from './News';
 
 class About extends React.Component {
   render() {
@@ -30,10 +30,10 @@ class About extends React.Component {
           <div className="container-center">
             <div className="title-center">
               <div className="panel-body">
-                <News className="inline center" limit="4"></News>
+                <NewsList className="inline center" limit="4"/>
                 <br/>
                 <br/>
-                <Link className="hvr-fade" to="/news" url="News.getAllInfo">查看更多</Link>
+                <Link className="hvr-fade" to="/news/list">查看更多</Link>
               </div>
             </div>
           </div>

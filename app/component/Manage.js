@@ -20,4 +20,4 @@ class Manage extends React.Component {
     )
   }
 }
-export { Manage };
+export { Manage, ManageNews, ManageWork };

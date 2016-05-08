@@ -1,12 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router';
-import { Carousel} from 'antd';
+import { Carousel } from 'antd';
 
 class Index extends React.Component {
-  onChange(a, b, c) {
-    console.log(a, b, c);
-  }
   render() {
     return (
       <div>

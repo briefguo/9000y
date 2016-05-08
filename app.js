@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var webpack = require('webpack');
 var config = require('./webpack.config')
+
 var routes = require('./routes/index');
 
 var app = express();
