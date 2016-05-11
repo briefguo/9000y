@@ -7,8 +7,8 @@ class About extends React.Component {
   render() {
     return (
       <div>
-        <section>
-          <div className="container-center">
+        <div className="bannar">
+          <div className="absolute container-center bannar-text">
             <div className="title-center animated fadeInUp">
               <h2>关于我们
                 <br/>
@@ -18,7 +18,12 @@ class About extends React.Component {
               <a className="hvr-fade animated-slow fadeInUp" href="#" id="btn-play">了解公司</a>
             </div>
           </div>
-        </section>
+          <div className="background-wrapper">
+            <figure>
+              <img src="/public/images/bannar-4.jpg" alt=""/>
+            </figure>
+          </div>
+        </div>
         <section>
           <div className="container-center">
             <div className="title-center">

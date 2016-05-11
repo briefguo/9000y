@@ -17,14 +17,14 @@ export default (
     <Route path="work" component={Work}>
       <Route path="project" component={Project} />
       <Route path=":id" component={WorkDetail} />
-      <Redirect from="(:id/)manage" to="/manage/work(/:id)" />
+      <Redirect from="(project/)(:id/)manage" to="/manage/work(/:id)" />
     </Route>
     <Route path="support" component={Support} />
     <Route path="about" component={About} />
     <Route path="news" component={News}>
       <Route path="list" component={NewsList} />
       <Route path=":id" component={NewsDetail} />
-      <Redirect from="(:id/)manage" to="/manage/news(/:id)" />
+      <Redirect from="(list/)(:id/)manage" to="/manage/news(/:id)" />
     </Route>
     <Route path="manage" component={Manage}>
       <Route path="news(/:id)" component={ManageNews} />

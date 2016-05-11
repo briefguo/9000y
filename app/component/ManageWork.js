@@ -45,7 +45,12 @@ class ManageWork extends React.Component {
       return;
     }
     query(this.state.url, this.state, (r) => {
-      this.props.history.pushState(null, '/work/' + this.state.projectId)
+      if (this.state.action=='新增') {
+        this.props.history.pushState(null, '/work/' + r.data.info)
+      }
+      else{
+        this.props.history.pushState(null, '/work/' + this.state.projectId)
+      }
     })
   }
   handleTitleChange(e) {
@@ -135,7 +140,7 @@ class ManageWork extends React.Component {
             label="时间："
             labelCol={{ span: 6 }}
             wrapperCol={{ span: 14 }}>
-            <DatePicker value={this.state.projectTime} onChange={(e)=>this.handleDatePickerChange(e)} />
+            <DatePicker value={this.state.projectTime} onChange={(e)=>this.handleDatePickerChange(e)}/>
           </FormItem>
           <FormItem
             label=" "

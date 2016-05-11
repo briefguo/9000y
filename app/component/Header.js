@@ -20,25 +20,27 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <Menu onClick={e=>this.handleClick(e)}
-        selectedKeys={[this.state.current]}
-        mode="horizontal">
-        <Menu.Item key="index">
-          <Link to="/">九千年文化</Link>
-        </Menu.Item>
-        <Menu.Item key="service">
-          <Link to="/service">服务内容</Link>
-        </Menu.Item>
-        <Menu.Item key="work">
-          <Link to="/work/project">产品案例</Link>
-        </Menu.Item>
-        <Menu.Item key="support">
-          <Link to="/support">技术支持</Link>
-        </Menu.Item>
-        <Menu.Item key="about">
-          <Link to="/about">关于我们</Link>
-        </Menu.Item>
-      </Menu>
+      <header>
+        <Menu onClick={e=>this.handleClick(e)}
+          selectedKeys={[this.state.current]}
+          mode="horizontal">
+          <Menu.Item key="index">
+            <Link className="white" to="/">九千年文化</Link>
+          </Menu.Item>
+          <Menu.Item key="service">
+            <Link className="white" to="/service">服务内容</Link>
+          </Menu.Item>
+          <Menu.Item key="work">
+            <Link className="white" to="/work/project">产品案例</Link>
+          </Menu.Item>
+          <Menu.Item key="support">
+            <Link className="white" to="/support">技术支持</Link>
+          </Menu.Item>
+          <Menu.Item key="about">
+            <Link className="white" to="/about">关于我们</Link>
+          </Menu.Item>
+        </Menu>
+      </header>
     )
   }
 }

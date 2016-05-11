@@ -35,7 +35,7 @@ class NewsList extends React.Component {
       });
     }
     return (
-      <div className="container start newsList">
+      <div className="content container start newsList">
         {newsNodes}
       </div>
     )

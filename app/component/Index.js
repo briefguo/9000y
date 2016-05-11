@@ -3,18 +3,25 @@ import { render } from 'react-dom';
 import { Link } from 'react-router';
 import { Carousel } from 'antd';
 
+
 class Index extends React.Component {
   render() {
     return (
       <div>
-        <section>
-          <div className="container-center">
+        <div className="bannar">
+          <div className="absolute bannar-text">
             <div className="title-center animated fadeInUp">
               <h1>九千年文化<br/><small>一家致力于互联网应用、服务、解决方案的供应商</small></h1>
+              <br/>
               <a className="hvr-fade animated-slow fadeInUp" href="#">了解详情</a>
             </div>
           </div>
-        </section>
+          <div className="background-wrapper">
+            <figure>
+              <img src="/public/images/bannar-1.jpg" alt=""/>
+            </figure>
+          </div>
+        </div>
         <section>
           <div className="container-center">
             <div className="title-center">

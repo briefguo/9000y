@@ -6,16 +6,22 @@ class Service extends React.Component {
   render() {
     return (
       <div>
-        <section>
-          <div className="container-center">
-            <div className="title-center animated fadeInUp">
+        <div className="bannar">
+          <div className="panel absolute bannar-text">
+            <div className="panel-title ml-100 animated fadeInUp">
               <h2>产品开发、策划运营支持、影视传播<br/>
                 <small>我们提供Web应用开发、App定制开发、微信创意开发、互联网策划与  运营、动漫游戏制作、广告宣传片制作、微电影制作等服务</small>
               </h2>
-              <a className="hvr-fade animated-slow fadeInUp" href="#">了解详情</a>
+              <br/>
+              <a className="hvr-fade hvr-pianyi animated-slow fadeInUp" href="#">了解详情</a>
             </div>
           </div>
-        </section>
+          <div className="background-wrapper">
+            <figure>
+              <img src="/public/images/bannar-2.jpg" alt=""/>
+            </figure>
+          </div>
+        </div>
         <section>
           <div className="container-center">
             <div className="title-center">

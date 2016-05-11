@@ -29,19 +29,26 @@ h6 {
 h1 small,
 h2 small,
 h3 small {
-  color: #777;
+  // color: #777;
 }
 
 section {
   padding: 200px 0;
   background-color: rgba(255, 255, 255, .8);
+  position: relative;
+  overflow: hidden;
 }
 
 header {
-  background-color: rgba(255, 255, 255, .8);
-  // position: fixed;
-  // width: 100%;
-  // z-index: 10;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+header ul {
+  background: rgba(0, 0, 0, 0.85) !important;
+  border: 0 !important;
+  color: @text-color;
 }
 
 nav {
@@ -97,8 +104,22 @@ article {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
 }
 
+.white {
+  // color: #fff !important;
+}
+
 .bg-white {
   background: #fff;
+}
+
+.bg-gray {
+  background: #fff;
+  color: @text-color;
+}
+
+.bg-yellow {
+  // background: @primary-color;
+  // color: @primary-color;
 }
 
 .center {
@@ -131,6 +152,31 @@ article {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.ml-100 {
+  margin-left: 100px;
+}
+
+.absolute {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  &.bannar-text {
+    margin-top: 250px;
+  }
+}
+
+.bannar {
+  color: #fff;
+}
+
+.background-wrapper {
+  position: relative;
+}
+
+figure img {
+  width: 100%;
 }
 
 .news {

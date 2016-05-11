@@ -41,7 +41,7 @@ class ManageNews extends React.Component {
       return;
     }
     query(this.state.url, this.state, (r) => {
-      this.props.history.pushState(null, '/news')
+      this.props.history.pushState(null, '/news/list')
     })
   }
   handleTitleChange(e) {

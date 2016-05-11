@@ -12,7 +12,7 @@ class Manage extends React.Component {
     return (
       <div>
         <div className="bg-white content">
-          <div className="newsDetail">
+          <div className="content newsDetail">
             {this.props.children}
           </div>
         </div>

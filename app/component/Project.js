@@ -7,7 +7,7 @@ class Project extends React.Component {
   render() {
     return (
       <div>
-        <section>
+        <section className="bg-gray">
           <div className="container center">
             <div className="title-center">
               <h2>产品案例
