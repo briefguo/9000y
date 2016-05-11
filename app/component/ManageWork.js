@@ -25,6 +25,10 @@ class ManageWork extends React.Component {
   componentDidMount() {
     if (this.props.params.id) {
       query('Project.getBaseInfo', { projectId: this.props.params.id }, (r) => {
+        if (!r.data.info.project_time.match('-')) {
+          var time = new Date(r.data.info.project_time);
+          r.data.info.project_time = time.toLocaleDateString().toString().replace(/\//g, '-');
+        }
         this.setState({
           action: '保存',
           postUser: 'GYJ',
@@ -45,10 +49,9 @@ class ManageWork extends React.Component {
       return;
     }
     query(this.state.url, this.state, (r) => {
-      if (this.state.action=='新增') {
+      if (this.state.action == '新增') {
         this.props.history.pushState(null, '/work/' + r.data.info)
-      }
-      else{
+      } else {
         this.props.history.pushState(null, '/work/' + this.state.projectId)
       }
     })
@@ -68,6 +71,8 @@ class ManageWork extends React.Component {
     }
   }
   handleDatePickerChange(e) {
+    var time = new Date(e);
+    e = time.toLocaleDateString().toString().replace(/\//g, '-');
     this.setState({ projectTime: e })
   }
   render() {
@@ -76,7 +81,7 @@ class ManageWork extends React.Component {
         <Affix>
           <Breadcrumb>
             <Breadcrumb.Item>首页</Breadcrumb.Item>
-            <Breadcrumb.Item href="/work">作品案例</Breadcrumb.Item>
+            <Breadcrumb.Item href="/work/project">作品案例</Breadcrumb.Item>
             <Breadcrumb.Item>{this.state.projectTitle}</Breadcrumb.Item>
           </Breadcrumb>
         </Affix>

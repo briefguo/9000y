@@ -27,7 +27,6 @@ class NewsDetail extends React.Component {
         news_class: r.data.info.news_class,
       });
     })
-    console.log(this);
   }
   render() {
     return (
@@ -35,8 +34,8 @@ class NewsDetail extends React.Component {
         <Affix>
           <Breadcrumb>
             <Breadcrumb.Item>首页</Breadcrumb.Item>
-            <Breadcrumb.Item href="">新闻</Breadcrumb.Item>
-            <Breadcrumb.Item href="">{this.state.news_class}</Breadcrumb.Item>
+            <Breadcrumb.Item href="list">新闻</Breadcrumb.Item>
+            <Breadcrumb.Item>{this.state.news_class}</Breadcrumb.Item>
             <Breadcrumb.Item>{this.state.news_title}</Breadcrumb.Item>
           </Breadcrumb>
         </Affix>
