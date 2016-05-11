@@ -5,7 +5,7 @@ const REMOTE = 'http://139.196.210.223:81/';
 
 export const query = function(api_name, params, callback) {
 
-  var api_url = LOCAL + '?service=' + api_name;
+  var api_url = REMOTE + '?service=' + api_name;
 
   $.ajax({
     url: api_url,
