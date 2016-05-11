@@ -18,7 +18,7 @@ class Project extends React.Component {
           <br/><br/>
           <WorkList limit="3"></WorkList>
         </section>
-        <section className="bg-white">
+        <section className="">
           <div className="container-center">
             <div className="panel-large">
               <div className="panel-title animated fadeInRight">

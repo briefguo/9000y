@@ -9,7 +9,7 @@ class Work extends React.Component {
   render() {
     console.log(this);
     return (
-      <div className="content">
+      <div>
         {this.props.children}
       </div>
     )

@@ -32,21 +32,23 @@ class WorkDetail extends React.Component {
   render() {
     return (
       <div className="bg-white projectDetail content">
-        <Affix>
-          <Breadcrumb>
-            <Breadcrumb.Item>首页</Breadcrumb.Item>
-            <Breadcrumb.Item href="">作品案例</Breadcrumb.Item>
-            <Breadcrumb.Item href="">{this.state.projectClass}</Breadcrumb.Item>
-            <Breadcrumb.Item>{this.state.projectTitle}</Breadcrumb.Item>
-          </Breadcrumb>
-        </Affix>
-        <br/><br/><br/>
-        <h2>{this.state.projectTitle}</h2>
-        <Tag><Icon type="tag"/> {this.state.projectClass}</Tag>
-        <p><small> {this.state.projectTime}</small></p>
-        <img src={this.state.projectImage} alt=""/>
-        <br/>
-        <article dangerouslySetInnerHTML={{__html:this.state.projectContent}}></article>
+        <div className="content">
+          <Affix>
+            <Breadcrumb>
+              <Breadcrumb.Item>首页</Breadcrumb.Item>
+              <Breadcrumb.Item href="">作品案例</Breadcrumb.Item>
+              <Breadcrumb.Item href="">{this.state.projectClass}</Breadcrumb.Item>
+              <Breadcrumb.Item>{this.state.projectTitle}</Breadcrumb.Item>
+            </Breadcrumb>
+          </Affix>
+          <br/><br/><br/>
+          <h2>{this.state.projectTitle}</h2>
+          <Tag><Icon type="tag"/> {this.state.projectClass}</Tag>
+          <p><small> {this.state.projectTime}</small></p>
+          <img src={this.state.projectImage} alt=""/>
+          <br/>
+          <article dangerouslySetInnerHTML={{__html:this.state.projectContent}}></article>
+        </div>
       </div>
     )
   }
