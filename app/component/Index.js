@@ -2,26 +2,46 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router';
 import { Carousel } from 'antd';
+import { WorkList, WorkItem } from './WorkList';
 
 
 class Index extends React.Component {
   render() {
     return (
       <div>
-        <div className="bannar">
-          <div className="absolute bannar-text">
-            <div className="title-center animated fadeInUp">
-              <h1>九千年文化<br/><small>一家致力于互联网应用、服务、解决方案的供应商</small></h1>
-              <br/>
-              <a className="hvr-fade animated-slow fadeInUp" href="#">了解详情</a>
+        <Carousel autoplay effect="fade">
+          <div className="bannar">
+            <div className="absolute bannar-text">
+              <div className="title-center animated fadeInUp">
+                <h1>九千年文化<br/><small>一家致力于互联网应用、服务、解决方案的供应商</small></h1>
+                <br/>
+                <a className="hvr-fade animated-slow fadeInUp" href="#">了解详情</a>
+              </div>
+            </div>
+            <div className="background-wrapper">
+              <figure>
+                <img src="/public/images/bannar-1.jpg" alt=""/>
+              </figure>
             </div>
           </div>
-          <div className="background-wrapper">
-            <figure>
-              <img src="/public/images/bannar-1.jpg" alt=""/>
-            </figure>
+          <div className="bannar">
+            <div className="absolute container-center bannar-text">
+              <div className="title-center animated fadeInUp">
+                <h2>关于我们
+                  <br/>
+                  <small>专注于互联网服务提供、Web应用开发、解决方案策划等</small>
+                </h2>
+                <br/>
+                <a className="hvr-fade animated-slow fadeInUp" href="#" id="btn-play">了解公司</a>
+              </div>
+            </div>
+            <div className="background-wrapper">
+              <figure>
+                <img src="/public/images/bannar-5.jpg" alt=""/>
+              </figure>
+            </div>
           </div>
-        </div>
+        </Carousel>
         <section>
           <div className="container-center">
             <div className="title-center">
@@ -31,14 +51,6 @@ class Index extends React.Component {
               </h2>
             </div>
           </div>
-          <div className="container center">
-            <Carousel afterChange={e=>this.onChange(e)}>
-              <div><h3>1</h3></div>
-              <div><h3>2</h3></div>
-              <div><h3>3</h3></div>
-              <div><h3>4</h3></div>
-            </Carousel>
-          </div>
         </section>
         <section className="bg-white">
           <div className="container-center">
@@ -46,8 +58,8 @@ class Index extends React.Component {
               <h2>作品案例<br/><small>产品开发、策划与运营、影视传播</small></h2>
             </div>
           </div>
-          <div className="container">
-
+          <div className="content">
+            <WorkList limit="6"></WorkList>
           </div>
         </section>
       </div>
