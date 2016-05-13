@@ -36,16 +36,6 @@ class Support extends React.Component {
             </div>
           </div>
         </section>
-        <section id="Content-progress" className="section-content">
-          <div className="container-center">
-            <div className="title-center">
-              <h2>服务流程
-                  <br/>
-                  <small>产品开发、策划与运营、影视传播</small>
-                </h2>
-            </div>
-          </div>
-        </section>
       </div>
     )
   }

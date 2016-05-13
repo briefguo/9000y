@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { query } from '../common/query'
 import { NewsItem } from './NewsItem'
+import { Row, Col } from 'antd'
 
 class NewsList extends React.Component {
   constructor(props, context) {
@@ -30,13 +31,17 @@ class NewsList extends React.Component {
           animationFillMode: 'both'
         }
         return (
-          <NewsItem speed={animatedSpeed} key={news.id} id={news.id} data={news} />
+          <Col key={news.id} span="8">
+            <NewsItem speed={animatedSpeed} id={news.id} data={news} />
+          </Col>
         );
       });
     }
     return (
-      <div className="content container start newsList">
-        {newsNodes}
+      <div className="content newsList">
+        <Row>
+          {newsNodes}
+        </Row>
       </div>
     )
   }

@@ -9,7 +9,7 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <Carousel autoplay effect="fade">
+        <Carousel effect="fade">
           <div className="bannar">
             <div className="absolute bannar-text">
               <div className="title-center animated fadeInUp">
@@ -42,16 +42,6 @@ class Index extends React.Component {
             </div>
           </div>
         </Carousel>
-        <section>
-          <div className="container-center">
-            <div className="title-center">
-              <h2>服务范围
-                <br/>
-                <small>产品开发、策划与运营、影视传播</small>
-              </h2>
-            </div>
-          </div>
-        </section>
         <section className="bg-white">
           <div className="container-center">
             <div className="title-center">

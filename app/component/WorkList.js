@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { query } from '../common/query';
 import WorkItem from './WorkItem';
+import { Row, Col } from 'antd';
 
 class WorkList extends React.Component {
   constructor(props, context) {
@@ -28,18 +29,19 @@ class WorkList extends React.Component {
           animationFillMode: 'both'
         }
         return (
-          <WorkItem
-            speed={animatedSpeed}
-            key={project.id}
-            id={project.id}
-            data={project} />
+          <Col key={project.id} span="4">
+            <WorkItem
+              speed={animatedSpeed}
+              id={project.id}
+              data={project} />
+          </Col>
         );
       });
     }
     return (
-      <div className="container center projectList">
+      <Row className="container center projectList">
         {workNodes}
-      </div>
+      </Row>
     )
   }
 }
