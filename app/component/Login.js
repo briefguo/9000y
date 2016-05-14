@@ -44,11 +44,15 @@ class LoginForm extends React.Component {
       return;
     }
     query(this.state.url, this.state, (r) => {
-      message.info('登陆成功');
-      setTimeout(function () {
-        window.location.href = '/user/' + r.data.info.id;
-      }, 500);
-      sessionStorage.user = JSON.stringify(r.data.info);
+      if (r.data.code == 0) {
+        message.info('登陆成功');
+        sessionStorage.user = JSON.stringify(r.data.info);
+        setTimeout(function() {
+          window.location.href = '/user/' + r.data.info.id;
+        }, 500);
+      } else {
+        message.info('登陆失败，请检查用户名或密码');
+      }
     })
   }
   handleNameChange(e) {

@@ -7,7 +7,6 @@ import { ManageNews } from './ManageNews'
 import { ManageWork } from './ManageWork'
 
 class Manage extends React.Component {
-
   render() {
     return (
       <div>

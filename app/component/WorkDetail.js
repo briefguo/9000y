@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Icon, Affix, Breadcrumb, Tag } from 'antd';
+import { Icon, Affix, Breadcrumb, Tag, Row, Col } from 'antd';
 import { query } from '../common/query'
 
 class WorkDetail extends React.Component {
@@ -36,18 +36,26 @@ class WorkDetail extends React.Component {
           <Affix>
             <Breadcrumb>
               <Breadcrumb.Item>首页</Breadcrumb.Item>
-              <Breadcrumb.Item href="">作品案例</Breadcrumb.Item>
-              <Breadcrumb.Item href="">{this.state.projectClass}</Breadcrumb.Item>
+              <Breadcrumb.Item>作品案例</Breadcrumb.Item>
+              <Breadcrumb.Item>{this.state.projectClass}</Breadcrumb.Item>
               <Breadcrumb.Item>{this.state.projectTitle}</Breadcrumb.Item>
             </Breadcrumb>
           </Affix>
           <br/><br/><br/>
-          <h2>{this.state.projectTitle}</h2>
-          <Tag><Icon type="tag"/> {this.state.projectClass}</Tag>
-          <p><small> {this.state.projectTime}</small></p>
-          <img src={this.state.projectImage} alt=""/>
-          <br/>
-          <article dangerouslySetInnerHTML={{__html:this.state.projectContent}}></article>
+          <Row>
+            <Col span="12">
+              <img className="img-res" src={this.state.projectImage} alt=""/>
+            </Col>
+            <Col span="11" offset="1">
+              <h2>{this.state.projectTitle}<small> {this.state.projectTime}</small></h2>
+              <br/>
+              <article>
+                <div dangerouslySetInnerHTML={{__html:this.state.projectContent}}></div>
+              </article>
+              <br/>
+              <Tag><Icon type="tag"/> {this.state.projectClass}</Tag>
+            </Col>
+          </Row>
         </div>
       </div>
     )

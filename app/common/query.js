@@ -15,13 +15,14 @@ export const query = function(api_name, params, callback) {
     success: function(r) {
       try {
         if (r.ret == 400) {
-          alert(r.msg);
+          console.log(r.msg);
           return;
         }
         callback(r);
         console.log(api_name, params, r);
       } catch (e) {
-        alert(e);
+        // alert(e);
+        // console.log(e);
         console.log(e);
       }
     }
