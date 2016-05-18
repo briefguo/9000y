@@ -1,6 +1,6 @@
 {
   "name": "9000y",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "private": true,
   "scripts": {
     "default": "babel-node ./bin/www & npm run watch",
