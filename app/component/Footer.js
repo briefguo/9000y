@@ -49,11 +49,9 @@ class Footer extends React.Component {
               <span id="Logo-footer"></span>
               <small> 中国 光谷</small>
               <br/>
-              <span className="CW">CW Studio/ 简過工作室</span>
+              <span className="CW">BG Studio/ 简過工作室</span>
             </Row>
-            © 2015 9000Y.Inc All Rights Reserved
-            <br/>X-Powered-By:Express
-            <br/>
+            © 2016 BriefGuo
           </Col>
         </Row>
       </footer>

@@ -48,7 +48,7 @@ module.exports = {
     // }]),
     new webpack.optimize.CommonsChunkPlugin('vendor', '/public/javascripts/vendor.js'),
     new HtmlWebpackPlugin({
-      template: './public/template.html',
+      template: './app/template.html',
       filename: 'index.html',
       inject: 'body',
     }),

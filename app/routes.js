@@ -5,7 +5,7 @@ import { App } from './component/App';
 import { Index } from './component/Index';
 import { Register } from './component/Register';
 import { Login } from './component/Login';
-import { User, UserDetail } from './component/User';
+import { User, UserDetail, UserInfo } from './component/User';
 import { Service } from './component/Service';
 import { Work, WorkDetail, Project } from './component/Work';
 import { Support } from './component/Support';
@@ -20,7 +20,7 @@ export default (
     <Route path="login" component={Login} />
     <Route path="logout" component={Login} />
     <Route path="user" component={User}>
-      <Route path=":id" component={UserDetail} />
+      <Route path=":id" component={UserInfo} />
       <Redirect from="(:id/)manage704949848" to="/manage/user(/:id)" />
     </Route>
     <Route path="news" component={News}>

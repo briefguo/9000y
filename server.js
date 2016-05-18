@@ -27,21 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/')));
 
 app.use('/', routes);
-// app.use((req, res) => {
-//   // 注意！这里的 req.url 应该是从初始请求中获得的
-//   // 完整的 URL 路径，包括查询字符串。
-//   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-//     if (error) {
-//       res.send(500, error.message)
-//     } else if (redirectLocation) {
-//       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-//     } else if (renderProps) {
-//       res.send(200, renderToString(<RoutingContext {...renderProps} />))
-//     } else {
-//       res.send(404, 'Not found')
-//     }
-//   })
-// })
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Link } from 'react-router'
 import { message, Tabs, Affix, DatePicker, Breadcrumb, Form, Tag, Row, Col, Input, Button, Upload, Select, Checkbox, Radio, Tooltip, Icon } from 'antd';
 import { query } from '../common/query'
-import { ManageWork, ManageNews } from './Manage';
+// import { ManageWork, ManageNews } from './Manage';
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;

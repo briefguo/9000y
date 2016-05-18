@@ -26,7 +26,7 @@ class Header extends React.Component {
     if (this.state.actionCode == 'logout') {
       e.preventDefault();
       message.info('注销成功');
-      setTimeout(function () {
+      setTimeout(function() {
         window.location.href = '/login';
       }, 500);
     }
@@ -38,9 +38,10 @@ class Header extends React.Component {
         key: 'user',
         id: data.id,
         action: '注销',
+        user: data.user_login,
         actionCode: 'logout'
       });
-      console.log(this, data);
+      // console.log(this, data);
     }
   }
   render() {
@@ -65,7 +66,7 @@ class Header extends React.Component {
             <Link to="/about">关于我们</Link>
           </Menu.Item>
           <Menu.Item style={{float:'right',display:this.state.key}} key={this.state.key}>
-            <Link to={"/user/"+this.state.id}>个人中心</Link>
+            <Link to={"/user/"+this.state.id}>{this.state.user}</Link>
           </Menu.Item>
           <Menu.Item style={{float:'right'}} key={this.state.action}>
             <Link to={this.state.actionCode} onClick={(e)=>this.handleLogin(e)}>{this.state.action}</Link>

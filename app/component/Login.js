@@ -67,23 +67,21 @@ class LoginForm extends React.Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <div>
-        <Form horizontal onSubmit={e=>this.handleSubmit(e)}>
-          <FormItem
-            {...formItemLayout}
-            label="用户名：">
-            <Input onChange={(e)=>this.handleNameChange(e)} placeholder="请输入用户名" />
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label="密码：">
-            <Input onChange={(e)=>this.handlePassChange(e)}  type="password" placeholder="请输入密码" />
-          </FormItem>
-          <FormItem style={{ marginTop: 24 }}>
-            <Button type="primary" htmlType="submit">{this.state.action}</Button>
-          </FormItem>
-        </Form>
-      </div>
+      <Form horizontal onSubmit={e=>this.handleSubmit(e)}>
+        <FormItem
+          {...formItemLayout}
+          label="用户名：">
+          <Input onChange={(e)=>this.handleNameChange(e)} placeholder="请输入用户名" />
+        </FormItem>
+        <FormItem
+          {...formItemLayout}
+          label="密码：">
+          <Input onChange={(e)=>this.handlePassChange(e)}  type="password" placeholder="请输入密码" />
+        </FormItem>
+        <FormItem style={{ marginTop: 24 }}>
+          <Button type="primary" htmlType="submit">{this.state.action}</Button>
+        </FormItem>
+      </Form>
     );
   }
 }
