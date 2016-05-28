@@ -4,5 +4,5 @@ node_modules/
 dist/
 .tmp/
 bower_components/
-public/javascripts/
-public/uploads/
+public/javascripts
+public/uploads
