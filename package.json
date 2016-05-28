@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "default": "babel-node ./bin/www & npm run watch",
+    "default": "node ./bin/www & npm run watch",
     "build": "webpack",
     "watch": "webpack -w",
     "start": "DEBUG=9000y:* npm run default"

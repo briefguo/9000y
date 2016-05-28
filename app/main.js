@@ -1,5 +1,3 @@
-"use strict";
-
 import './common/lib';
 import React from 'react';
 import ReactDOM from 'react-dom';
