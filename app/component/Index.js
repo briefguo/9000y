@@ -6,9 +6,9 @@ import { WorkList, WorkItem } from './WorkList';
 
 
 class Index extends React.Component {
-  render() {
-    return (
-      <div>
+    render() {
+        return (
+            <div>
         <Carousel effect="fade">
           <div className="bannar">
             <div className="absolute bannar-text">
@@ -53,8 +53,9 @@ class Index extends React.Component {
           </div>
         </section>
       </div>
-    )
-  }
+        )
+    }
 }
 
+export { Index };
 export { Index };
