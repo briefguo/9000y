@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Route, IndexRoute, Redirect } from 'react-router';
 
@@ -5,7 +6,7 @@ import { App } from './component/App';
 import { Index } from './component/Index';
 import { Register } from './component/Register';
 import { Login } from './component/Login';
-import { User, UserDetail, UserInfo } from './component/User';
+import { User, UserInfo } from './component/User';
 import { Service } from './component/Service';
 import { Work, WorkDetail, Project } from './component/Work';
 import { Support } from './component/Support';

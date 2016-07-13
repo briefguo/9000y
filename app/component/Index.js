@@ -1,14 +1,18 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Link } from 'react-router';
 import { Carousel } from 'antd';
-import { WorkList, WorkItem } from './WorkList';
-
+import { WorkList } from './WorkList';
+import drawMap from '../common/drawMap';
 
 class Index extends React.Component {
-    render() {
-        return (
-            <div>
+  constructor(props, context) {
+    super(props, context);
+  }
+  componentDidMount() {
+    drawMap('#chinamap');
+  }
+  render() {
+    return (
+      <div>
         <Carousel effect="fade">
           <div className="bannar">
             <div className="absolute bannar-text">
@@ -42,6 +46,9 @@ class Index extends React.Component {
             </div>
           </div>
         </Carousel>
+        <section>
+          <div className="container-center" id="chinamap"></div>
+        </section>
         <section className="bg-white">
           <div className="container-center">
             <div className="title-center">
@@ -49,13 +56,12 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="content">
-            <WorkList limit="6"></WorkList>
+            <WorkList limit="6" />
           </div>
         </section>
       </div>
-        )
-    }
+    );
+  }
 }
 
-export { Index };
 export { Index };

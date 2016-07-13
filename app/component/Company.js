@@ -1,8 +1,8 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Link } from 'react-router'
-import { Icon, Affix, Breadcrumb, Tag, Row, Col } from 'antd'
-import { query } from '../common/query'
+import React from 'react';
+// import { render } from 'react-dom';
+// import { Link } from 'react-router';
+import { Affix, Breadcrumb, Row, Col } from 'antd';
+// import { query } from '../common/query';
 
 class Company extends React.Component {
   render() {

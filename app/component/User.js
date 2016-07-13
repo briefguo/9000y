@@ -1,13 +1,13 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Link } from 'react-router'
-import { message, Affix, Breadcrumb, Form, Tag, Row, Col, Input, Button, Upload, Select, Checkbox, Radio, Tooltip, Icon } from 'antd';
-import { query } from '../common/query'
-import { UserDetail } from './UserDetail'
-import { UserInfo } from './UserInfo'
+import React from 'react';
+// import { render } from 'react-dom';
+// import { Link } from 'react-router';
+import { Row, Col } from 'antd';
+// import { query } from '../common/query';
+import { UserDetail } from './UserDetail';
+import { UserInfo } from './UserInfo';
 
-const FormItem = Form.Item;
-const RadioGroup = Radio.Group;
+// const FormItem = Form.Item;
+// const RadioGroup = Radio.Group;
 
 class User extends React.Component {
   render() {

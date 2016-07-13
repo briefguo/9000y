@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
+// import { render } from 'react-dom';
+
 import { Link } from 'react-router';
 import { NewsList } from './News';
 import { Company } from './Company';
@@ -48,7 +49,7 @@ class About extends React.Component {
           </div>
         </section>
       </div>
-    )
+    );
   }
 }
 

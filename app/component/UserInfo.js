@@ -11,6 +11,10 @@ const TabPane = Tabs.TabPane;
 class UserInfo extends React.Component {
   constructor(props, context) {
     super(props, context);
+    if (!sessionStorage.user) {
+      window.history.go('/login');
+    }
+    console.log('lalalla');
     let data = JSON.parse(sessionStorage.user);
     this.state = {
       user_id: data.id,

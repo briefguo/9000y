@@ -1,15 +1,15 @@
-var express   = require('express');
-var fs        = require('fs');
-var path      = require('path')
+var express = require('express');
+var fs = require('fs');
+var path = require('path');
 var multipart = require('connect-multiparty');
-var router    = express.Router();
+var router = express.Router();
 
 /* GET App home page. */
-router.get('*', function(req, res) {
-  res.sendFile(path.resolve('./', 'index.html'))
-})
+router.get('*', function (req, res) {
+  res.sendFile(path.resolve('./', 'index.html'));
+});
 
-router.post('/upload', multipart(), function(req, res) {
+router.post('/upload', multipart(), function (req, res) {
   //get filename
   var filename = req.files.files.originalFilename || path.basename(req.files.files.path);
 

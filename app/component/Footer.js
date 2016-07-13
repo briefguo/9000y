@@ -1,13 +1,64 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Link } from 'react-router'
-import { Row, Col, Menu, Icon } from 'antd'
+// @flow
+
+import React from 'react';
+// import ReactDOM from 'react-dom';
+import { Link } from 'react-router';
+import { Row, Col } from 'antd';
+
+// class Button extends React.Component {
+//   props: {
+//     title: string,
+//     visited: boolean,
+//     onClick: () => void,
+//   };
+//
+//   state: {
+//     display: 'static' | 'hover' | 'active';
+//   };
+//
+//   static defaultProps: { visited: boolean };
+//
+//   onMouseEnter: () => void;
+//   onMouseLeave: () => void;
+//   onMouseDown: () => void;
+//
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       display: 'static',
+//     };
+//
+//     const setDisplay = display => this.setState({ display });
+//
+//     this.onMouseEnter = () => setDisplay('hover');
+//     this.onMouseLeave = () => setDisplay('static');
+//     this.onMouseDown = () => setDisplay('active');
+//   }
+//
+//   render() {
+//     let className = 'button ' + this.state.display;
+//     if (this.props.visited) {
+//       className += ' visited';
+//     }
+//
+//     return (
+//       <div className={className}
+//         onMouseEnter={this.onMouseEnter}
+//         onMouseLeave={this.onMouseLeave}
+//         onMouseDown={this.onMouseDown}
+//         onClick={this.props.onClick}>
+//         {this.props.title}
+//       </div>
+//     );
+//   }
+// }
+// Button.defaultProps = { visited: false };
 
 class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <Row type='flex' justify="space-around">
+        <Row type="flex" justify="space-around">
           <Col span="3">
             <p>服务</p>
             <ul>
@@ -55,7 +106,7 @@ class Footer extends React.Component {
           </Col>
         </Row>
       </footer>
-    )
+    );
   }
 }
 export { Footer };

@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Link, browserHistory } from 'react-router';
+// import { render } from 'react-dom';
+// import { Link, browserHistory } from 'react-router';
 import { query } from '../common/query';
 
-import { Affix, Breadcrumb, Form, Input, Button, Upload, Select, Checkbox, Radio, DatePicker, Tooltip, Icon } from 'antd';
+import { Affix, Breadcrumb, Form, Input, Button, Upload, Select, DatePicker, Icon } from 'antd';
 
 const FormItem = Form.Item;
 
@@ -40,7 +40,7 @@ class ManageWork extends React.Component {
           projectImage: r.data.info.project_image,
           projectTime: r.data.info.project_time,
         });
-      })
+      });
     }
   }
   handleSubmit(e) {
@@ -49,12 +49,12 @@ class ManageWork extends React.Component {
       return;
     }
     query(this.state.url, this.state, (r) => {
-      if (this.state.action == '新增') {
-        this.props.history.pushState(null, '/work/' + r.data.info)
+      if (this.state.action === '新增') {
+        this.props.history.pushState(null, '/work/' + r.data.info);
       } else {
-        this.props.history.pushState(null, '/work/' + this.state.projectId)
+        this.props.history.pushState(null, '/work/' + this.state.projectId);
       }
-    })
+    });
   }
   handleTitleChange(e) {
     this.setState({ projectTitle: e.target.value })

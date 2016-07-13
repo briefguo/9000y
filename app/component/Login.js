@@ -1,23 +1,22 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Link, browserHistory } from 'react-router'
-import { message, Affix, Breadcrumb, Form, Tag, Row, Col, Input, Button, Upload, Select, Checkbox, Radio, Tooltip, Icon } from 'antd';
-import { query } from '../common/query'
+import React from 'react';
+// import { render } from 'react-dom';
+import { browserHistory } from 'react-router';
+import { message, Form, Row, Col, Input, Button } from 'antd';
+import { query } from '../common/query';
 
 const FormItem = Form.Item;
-const RadioGroup = Radio.Group;
+// const RadioGroup = Radio.Group;
 
 class Login extends React.Component {
   constructor(props, context) {
     super(props, context);
-    sessionStorage.clear();
   }
   render() {
     return (
       <section>
         <Row className="container center">
           <Col span="6">
-            <LoginForm history={browserHistory}></LoginForm>
+            <LoginForm history={browserHistory}/>
           </Col>
         </Row>
       </section>
@@ -30,11 +29,8 @@ class LoginForm extends React.Component {
     super(props, context);
     this.state = {
       action: '登陆',
-      url: 'User.login',
-      id: null,
       userName: '',
       passWord: '',
-      userEmail: '',
     };
   }
   handleSubmit(e) {
@@ -43,23 +39,23 @@ class LoginForm extends React.Component {
       console.log(e, this);
       return;
     }
-    query(this.state.url, this.state, (r) => {
-      if (r.data.code == 0) {
+    query('User.login', this.state, (r) => {
+      if (r.data.code === 0) {
         message.info('登陆成功');
         sessionStorage.user = JSON.stringify(r.data.info);
-        setTimeout(function() {
-          window.location.href = '/user/' + r.data.info.id;
+        setTimeout((that = this) => {
+          that.props.history.pushState('', 'user/' + r.data.info.id);
         }, 500);
       } else {
         message.info('登陆失败，请检查用户名或密码');
       }
-    })
+    });
   }
   handleNameChange(e) {
-    this.setState({ userName: e.target.value })
+    this.setState({ userName: e.target.value });
   }
   handlePassChange(e) {
-    this.setState({ passWord: e.target.value })
+    this.setState({ passWord: e.target.value });
   }
   render() {
     const formItemLayout = {
@@ -67,16 +63,12 @@ class LoginForm extends React.Component {
       wrapperCol: { span: 14 },
     };
     return (
-      <Form horizontal onSubmit={e=>this.handleSubmit(e)}>
-        <FormItem
-          {...formItemLayout}
-          label="用户名：">
-          <Input onChange={(e)=>this.handleNameChange(e)} placeholder="请输入用户名" />
+      <Form horizontal={true} onSubmit={e => this.handleSubmit(e)}>
+        <FormItem label="用户名：" {...formItemLayout}>
+          <Input onChange={(e) => this.handleNameChange(e)} placeholder="请输入用户名" />
         </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="密码：">
-          <Input onChange={(e)=>this.handlePassChange(e)}  type="password" placeholder="请输入密码" />
+        <FormItem label="密码：" {...formItemLayout}>
+          <Input onChange={(e) => this.handlePassChange(e)} type="password" placeholder="请输入密码" />
         </FormItem>
         <FormItem style={{ marginTop: 24 }}>
           <Button type="primary" htmlType="submit">{this.state.action}</Button>
