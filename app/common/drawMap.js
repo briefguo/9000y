@@ -1,7 +1,7 @@
 var d3 = require('d3');
 
-import { width, height, color, data } from 'json!./mapConfig.json';
-// console.log(d3);
+import { width, height, ratio, color, data } from 'json!./mapConfig.json';
+
 export default (element) => {
   //初始化变量
   var svg, projection, path;
@@ -14,7 +14,7 @@ export default (element) => {
   // 地址映射
   projection = d3.geoMercator()
     .center([107, 31])
-    .scale(850)
+    .scale(ratio)
     .translate([width / 2, height / 2]);
   path = d3.geoPath()
     .projection(projection);
@@ -38,10 +38,12 @@ export default (element) => {
     .on('mouseover', function (d, i) {
       // console.log(d, i, this);
       d3.select(this)
-        .attr('fill', 'yellow');
+        .attr('stroke', '#fff')
+        .attr('fill', '#ff804c');
     })
     .on('mouseout', function (d, i) {
       d3.select(this)
+        .attr('stroke', '#777')
         .attr('fill', color[i]);
     });
   return 'ok';
