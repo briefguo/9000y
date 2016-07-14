@@ -1,7 +1,7 @@
 var d3 = require('d3');
 
 import { width, height, color, data } from 'json!./mapConfig.json';
-console.log(d3);
+// console.log(d3);
 export default (element) => {
   //初始化变量
   var svg, projection, path;
@@ -29,13 +29,14 @@ export default (element) => {
     .data(data.features)
     .enter()
     .append('path')
-    .attr('stroke', '#000')
-    .attr('stroke-width', 1)
+    .attr('stroke', '#777')
+    .attr('stroke-width', 0.5)
     .attr('fill', function (d, i) {
       return color[i];
     })
     .attr('d', path)
     .on('mouseover', function (d, i) {
+      // console.log(d, i, this);
       d3.select(this)
         .attr('fill', 'yellow');
     })

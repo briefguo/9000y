@@ -7,8 +7,9 @@ export const query = function (serviceString: string, params: any, callback: any
 
   let reqURL, myFormData, XHR;
 
-  XHR = new XMLHttpRequest();
   reqURL = REMOTE + '?service=' + serviceString;
+
+  XHR = new XMLHttpRequest();
   XHR.open('POST', reqURL, true);
   XHR.onreadystatechange = function () {
     if (XHR.readyState === 4) {

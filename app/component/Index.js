@@ -13,6 +13,9 @@ class Index extends React.Component {
   render() {
     return (
       <div>
+        <section>
+          <div className="container-center" id="chinamap"></div>
+        </section>
         <Carousel effect="fade">
           <div className="bannar">
             <div className="absolute bannar-text">
@@ -46,9 +49,6 @@ class Index extends React.Component {
             </div>
           </div>
         </Carousel>
-        <section>
-          <div className="container-center" id="chinamap"></div>
-        </section>
         <section className="bg-white">
           <div className="container-center">
             <div className="title-center">
