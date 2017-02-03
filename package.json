@@ -1,75 +1,38 @@
 {
   "name": "9000y",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "flow": "flow; test $? -eq 0 -o $? -eq 2",
-    "dev": "webpack-dev-server --watch --progress --inline --colors",
-    "default": "node ./bin/www & npm run watch",
-    "build": "webpack",
-    "watch": "webpack -w --inline --progress --colors",
-    "start": "DEBUG=9000y:* npm run default"
-  },
-  "dependencies": {
-    "animate.css": "^3.5.1",
-    "antd": "^0.12.16",
-    "body-parser": "~1.13.2",
-    "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "draft-js": "^0.6.0",
-    "express": "~4.13.1",
-    "jade": "~1.11.0",
-    "morgan": "~1.6.1",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8",
-    "react-router": "^2.4.0",
-    "redux": "^3.5.2",
-    "serve-favicon": "~2.3.0"
-  },
+  "version": "1.0.0",
   "description": "9000y",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "GYJ",
+  "license": "ISC",
   "devDependencies": {
-    "antd": "^0.12.16",
-    "babel-eslint": "^6.1.2",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.4",
-    "babel-plugin-add-module-exports": "^0.1.4",
-    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "connect-multiparty": "^2.0.0",
-    "cross-env": "^1.0.7",
-    "css-loader": "^0.23.1",
-    "d3": "^4.1.1",
-    "es6-promise": "^3.1.2",
-    "eslint": "^3.0.0",
-    "eslint-config-google": "^0.6.0",
-    "eslint-plugin-flow": "0.0.0",
+    "babel-preset-stage-2": "^6.17.0",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.11.0",
     "eslint-plugin-react": "^5.2.2",
-    "fbjs": "^0.8.3",
     "fbjs-scripts": "^0.7.1",
-    "file-loader": "^0.8.5",
-    "flow-bin": "^0.28.0",
-    "history": "^3.0.0",
-    "html-webpack-plugin": "^2.16.1",
-    "json-loader": "^0.5.4",
-    "less": "^2.6.1",
-    "less-loader": "^2.2.3",
-    "react-router": "^2.5.2",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.0",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.10.0"
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://briefguo@github.com/BriefGuo/9000y.git"
   },
-  "keywords": [
-    "9000y"
-  ],
-  "author": "GYJ",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BriefGuo/9000y/issues"
   },
